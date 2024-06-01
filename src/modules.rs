@@ -9,12 +9,18 @@ pub mod components{
         in_valve:       f32,
         in_pressure:    f32,
         out_valve:      f32,
+        level:      f32,
     }
     impl <'a> Vessel <'a>{
 
-        fn flow(&self) -> f32{
+        fn in_flow(&self) -> f32{
 
-            return self.in_valve * self.in_pressure;
+            self.in_valve * self.in_pressure
+        }
+
+        fn out_flow(&self) -> f32{
+
+            self.out_valve * (self.level / 100.0)
         }
 
     }

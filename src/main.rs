@@ -1,14 +1,10 @@
 
 pub mod modules;
-//use std::io;
-
 use modules::components::{Vessel, PID};
-//use crate::ves
 
 fn main() {
-    println!("Hello, world!");
-
     
+    //Declaration of first simulated vessel
     let mut m_01 = Vessel{
         shape:          "cilinder",
         range:          [0.0, 2000.0],
@@ -20,6 +16,7 @@ fn main() {
         level:          0.0,
     };
 
+    
     let mut pid = PID{
         mv: 0.0,
         sp: 500.0,

@@ -1,8 +1,10 @@
 
-//#[warn(dead_code)]
 pub mod components{
-    
+    //Modules with main components to be used in proccess simulation    
+
     pub struct Vessel <'a> {
+        //Vessel structure to simulate level physics
+
         pub shape:          &'a str,
         pub range:          [f32; 2],
         pub h_hh:           [f32; 2],
@@ -27,6 +29,8 @@ pub mod components{
 
 
     pub struct PID {
+        //PID structure for proccess control
+        
         pub mv: f32,
         pub sp: f32,
         pub kp: f32,
